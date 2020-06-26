@@ -1,0 +1,36 @@
+.container {
+  width: 25vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-color: $border-color;
+  border-radius: 5px;
+  border: 2px solid;
+  padding: 30px, 20px;
+  text-align: center;
+  font-size: $font-size-base;
+  font-family: $font-family-base;
+  input {
+    background-color: $body-bg;
+    text-align: center;
+    margin: 20px;
+  }
+  > a {
+    color: $link-color;
+    :hover {
+      color: $link-hover-color;
+    }
+  }
+  > ul {
+    margin: 20px;
+    > li {
+      &:first-child {
+        @include btn($primary-color, white);
+      }
+      &:last-child {
+        @include btn(white, $primary-color);
+      }
+    }
+  }
+}
